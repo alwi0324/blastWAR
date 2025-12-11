@@ -1,0 +1,30 @@
+Package: blastWAR
+Type: Package
+Title: Blast WA Messages using Fonnte
+Version: 1.0.0
+Author: @alwi0324
+Maintainer: Emha Alwi Al Makky <emhaalwialmakky@gmail.com>
+Description: Provides functions to blasting WA messages using template from Google Sheets
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports:
+    dplyr,
+    DT,
+    googlesheets4,
+    httr,
+    shiny,
+    shinyjs,
+    shinythemes
+RoxygenNote: 7.3.3
+Depends: 
+    R (>= 3.5),
+    dplyr,
+    DT,
+    googlesheets4,
+    httr,
+    shiny,
+    shinyjs,
+    shinythemes
+URL: https://github.com/alwi0324/blastWAR
+BugReports: https://github.com/alwi0324/blastWAR/issues
