@@ -139,17 +139,17 @@ server <- function(input, output, session) {
   disable("btn_load")
   disable("btn_blast")
 
-  # Sembunyikan tab dengan delay singkat (50ms)
+  # Sembunyikan tab dengan delay singkat (1 detik)
   shinyjs::runjs(
     'setTimeout(function(){
-     Shiny.setInputValue("init_delay", true);
-     $("#main_tabs li a[data-value=\'tab_log\']").parent().hide();
-     $("#main_tabs li a[data-value=\'tab_error\']").parent().hide();
-  }, 100);'
+       Shiny.setInputValue("init_delay", true);
+       $("#main_tabs li a[data-value=\'tab_log\']").parent().hide();
+       $("#main_tabs li a[data-value=\'tab_error\']").parent().hide();
+    }, 1000);'
   )
 
 
-  # Observer untuk mengontrol tombol "1. Load Data" (tergantung URL)
+  # Observer untuk mengontrol tombol "Load Data" (tergantung URL)
   observe({
     sheet_url_filled <- !is.null(input$sheet_url) && input$sheet_url != ""
 
@@ -162,7 +162,7 @@ server <- function(input, output, session) {
     }
   })
 
-  # Observer untuk mengontrol tombol "2. Mulai Blast WA" (tergantung Token & Data)
+  # Observer untuk mengontrol tombol "Mulai Blast WA" (tergantung Token & Data)
   observe({
     is_valid_inputs <- !is.null(input$token) && input$token != "" &&
       !is.null(input$sheet_url) && input$sheet_url != ""
