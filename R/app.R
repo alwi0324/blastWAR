@@ -145,7 +145,7 @@ server <- function(input, output, session) {
      Shiny.setInputValue("init_delay", true);
      $("#main_tabs li a[data-value=\'tab_log\']").parent().hide();
      $("#main_tabs li a[data-value=\'tab_error\']").parent().hide();
-  }, 50);'
+  }, 100);'
   )
 
 
